@@ -1,0 +1,31 @@
+[versions]
+appcompat = "1.8.0"
+blocks = "12.0.0"
+agp = "9.4.1"
+revhub = "3.0.1"
+robot = "0.2.1"
+tuning = "1.0.2"
+kotlin = "2.4.10"
+coreKtx = "1.19.1"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+blocks = { module = "org.firstinspires.ftc:Blocks", version.ref = "blocks" }
+control = { module = "dev.nextftc.v2:control", version.ref = "robot" }
+ftccommon = { module = "org.firstinspires.ftc:FtcCommon", version.ref = "blocks" }
+hardware = { module = "org.firstinspires.ftc:Hardware", version.ref = "blocks" }
+inspection = { module = "org.firstinspires.ftc:Inspection", version.ref = "blocks" }
+onbotjava = { module = "org.firstinspires.ftc:OnBotJava", version.ref = "blocks" }
+revhub = { module = "com.pedropathing:revhub", version.ref = "revhub" }
+robot = { module = "dev.nextftc.v2:robot", version.ref = "robot" }
+robotcore = { module = "org.firstinspires.ftc:RobotCore", version.ref = "blocks" }
+robotserver = { module = "org.firstinspires.ftc:RobotServer", version.ref = "blocks" }
+tuning = { module = "com.pedropathing:tuning", version.ref = "tuning" }
+v2-hardware = { module = "dev.nextftc.v2:hardware", version.ref = "robot" }
+vision = { module = "org.firstinspires.ftc:Vision", version.ref = "blocks" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.3.20" }

@@ -99,14 +99,14 @@ public class Tests extends Procedure {
                 break;
             case LOCALIZATION:
                 if (!drivetrain)
-                    throw new IllegalArgumentException("Drivetrain is required for Localization Test.");
+                    throw new IllegalArgumentException("org.firstinspires.ftc.teamcode.Drivetrain is required for Localization Test.");
                 if (!localizer)
                     throw new IllegalArgumentException("Localizer is required for Localization Test.");
                 completed = runOpMode(new TestsLocalization(drivetrainFunction, localizerFunction));
                 break;
             case ODOMETRY:
                 if (!drivetrain)
-                    throw new IllegalArgumentException("Drivetrain is required for Odometry Test.");
+                    throw new IllegalArgumentException("org.firstinspires.ftc.teamcode.Drivetrain is required for Odometry Test.");
                 if (!localizer)
                     throw new IllegalArgumentException("Localizer is required for Odometry Test.");
                 completed = runOpMode(new TestsOdometry(drivetrainFunction, localizerFunction));
@@ -120,7 +120,7 @@ public class Tests extends Procedure {
                 break;
             case DRIVING:
                 if (!drivetrain)
-                    throw new IllegalArgumentException("Drivetrain is required for Driving Test.");
+                    throw new IllegalArgumentException("org.firstinspires.ftc.teamcode.Drivetrain is required for Driving Test.");
                 completed = runOpMode(new TestsDriving(drivetrainFunction));
                 break;
         }
