@@ -20,44 +20,13 @@ android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
     packagingOptions {
+        jniLibs {
+            pickFirsts += ['**/*.so']
+        }
         jniLibs.useLegacyPackaging true
-    }
-}
-
-repositories {
-    maven {
-        url = 'https://maven.brott.dev/'
-    }
-
-    maven {
-        url = 'https://mymaven.bylazar.com/releases'
-    }
-
-    maven {
-        url = "https://repo.dairy.foundation/releases"
-    }
-
-    maven {
-        url = "https://repo.dairy.foundation/snapshots"
     }
 }
 
 dependencies {
     implementation project(':FtcRobotController')
-    annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
-
-    // SolversLib: Latest Stable Version
-
-    implementation "org.solverslib:core:0.3.6" // core
-    implementation "org.solverslib:pedroPathing:0.3.6" // pedroPathing
-    implementation "org.solverslib:photon:0.3.6" // photon is optional (see docs for more info)
-
-    implementation "com.acmerobotics.dashboard:dashboard:0.5.1" // FTC Dashboard
-
-    // Pedro Pathing
-    implementation 'com.pedropathing:revhub:3.0.0'
-    implementation 'com.pedropathing:tuning:1.0.0' // AutoTune (see Tuning.java)
-
-    // Panels Dashboard
-    implementation "com.bylazar:fullpanels:1.0.12"
 }
