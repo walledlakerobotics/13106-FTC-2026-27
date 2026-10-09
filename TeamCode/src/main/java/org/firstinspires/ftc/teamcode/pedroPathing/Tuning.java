@@ -14,8 +14,8 @@ import org.firstinspires.ftc.teamcode.pedroPathing.procedures.Tests;
 /**
  * Pedro Pathing 3.0 AutoTune procedures.
  * <p>
- * Deploy this code, connect to the robot's Wi-Fi and open http://192.168.43.1:10158 in a browser to run them
- * (see https://pedropathing.com/docs/pathing/tuning). Paste the configs that AutoTune generates into
+ * Deploy this code, connect to the robot's Wi-Fi and open <a href="http://192.168.43.1:10158">...</a> in a browser to<a href=" run them
+ * (see https://pedropathing.com/d">...</a>ocs/pathing/tuning). Paste the configs that AutoTune generates into
  * {@link Constants}.
  * <p>
  * The tuners below assume a mecanum drivetrain with a goBILDA Pinpoint. If your robot differs, swap in the

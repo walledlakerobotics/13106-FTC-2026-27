@@ -18,7 +18,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 /**
  * Pedro Pathing 3.0 constants. The values below are placeholders: run the AutoTune procedures in
- * {@link Tuning} (see https://pedropathing.com/docs/pathing/tuning) and paste the generated configs here.
+ * {@link Tuning} (see <a href="https://pedropathing.com/docs/pathing/tuning">...</a>) and paste the generated configs here.
  * If you use a different drivetrain or localizer, swap the config classes and {@link #createFollower} to match.
  */
 public class Constants {
