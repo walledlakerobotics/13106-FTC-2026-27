@@ -13,7 +13,7 @@ class Drivetrain : Mechanism {
     val backLeft = NextMotor("back_left_motor")
     val backRight = NextMotor("back_right_motor")
 
-    val kinematics = MecanumKinematics()
+    val kinematics = MecanumKinematics(1.1)
 
     fun drive(x: () -> Double, y: () -> Double, rot: () -> Double): Command = infinite {
         val input = DriveInput(x(), y(), rot())
