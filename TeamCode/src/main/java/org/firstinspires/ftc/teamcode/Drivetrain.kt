@@ -5,6 +5,7 @@ import dev.nextftc.control.drive.DriveInput
 import dev.nextftc.control.drive.MecanumKinematics
 import dev.nextftc.hardware.actuators.NextMotor
 import dev.nextftc.robot.Mechanism
+import dev.nextftc.robot.triggers.CommandGamepad
 
 class Drivetrain : Mechanism {
     val frontLeft = NextMotor("front_left_motor")
@@ -24,4 +25,15 @@ class Drivetrain : Mechanism {
         backLeft.throttle = powers.backLeft
         backRight.throttle = powers.backRight
     }
+
+    fun driveByDefault(gamepad: CommandGamepad) {
+        defaultCommand = drive(
+            { -gamepad.leftStickY.value },
+            { -gamepad.leftStickX.value },
+            { -gamepad.rightStickX.value }
+        )
+    }
+
+    override var defaultCommand = super.defaultCommand
+        private set
 }
