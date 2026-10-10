@@ -6,6 +6,9 @@ import dev.nextftc.control.drive.MecanumKinematics
 import dev.nextftc.hardware.actuators.NextMotor
 import dev.nextftc.robot.Mechanism
 import dev.nextftc.robot.triggers.CommandGamepad
+import dev.nextftc.units.volts
+
+val NOMINAL_VOLTAGE = 12.0.volts
 
 class Drivetrain : Mechanism {
     val frontLeft = NextMotor("front_left_motor")
@@ -20,10 +23,10 @@ class Drivetrain : Mechanism {
 
         val powers = kinematics.calculate(input)
 
-        frontLeft.throttle = powers.frontLeft
-        frontRight.throttle = powers.frontRight
-        backLeft.throttle = powers.backLeft
-        backRight.throttle = powers.backRight
+        frontLeft.voltage = NOMINAL_VOLTAGE * powers.frontLeft
+        frontRight.voltage = NOMINAL_VOLTAGE * powers.frontRight
+        backLeft.voltage = NOMINAL_VOLTAGE * powers.backLeft
+        backRight.voltage = NOMINAL_VOLTAGE * powers.backRight
     }
 
     fun driveByDefault(gamepad: CommandGamepad) {
