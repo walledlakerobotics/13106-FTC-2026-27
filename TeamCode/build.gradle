@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.kotlin.android)
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
-apply plugin: 'com.android.application'
 
 //
 // build.gradle in TeamCode
@@ -19,22 +19,14 @@ apply plugin: 'com.android.application'
 apply from: '../build.common.gradle'
 apply from: '../build.dependencies.gradle'
 
-kotlin {
-    jvmToolchain(8)
-}
-
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
     packagingOptions {
-        jniLibs {
-            pickFirsts += ['**/*.so']
-        }
         jniLibs.useLegacyPackaging true
     }
 }
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation libs.core.ktx
 }
