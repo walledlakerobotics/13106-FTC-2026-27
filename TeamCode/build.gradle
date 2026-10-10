@@ -19,6 +19,10 @@ apply plugin: 'com.android.application'
 apply from: '../build.common.gradle'
 apply from: '../build.dependencies.gradle'
 
+kotlin {
+    jvmToolchain(8)
+}
+
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
@@ -27,9 +31,6 @@ android {
             pickFirsts += ['**/*.so']
         }
         jniLibs.useLegacyPackaging true
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
 }
 

@@ -16,8 +16,10 @@ dependencies {
     implementation libs.revhub
     implementation libs.tuning
 
-    implementation libs.control
-    implementation libs.v2.hardware
-    implementation libs.robot
+    implementation libs.nextftc.control
+    implementation libs.nextftc.hardware
+    implementation libs.nextftc.robot
+
+    implementation libs.pedro
 }
 
