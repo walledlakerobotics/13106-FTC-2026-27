@@ -6,21 +6,24 @@ import dev.nextftc.control.drive.MecanumKinematics
 import dev.nextftc.hardware.actuators.NextMotor
 import dev.nextftc.robot.Mechanism
 import dev.nextftc.robot.triggers.CommandGamepad
-import dev.nextftc.units.volts
-
-val NOMINAL_VOLTAGE = 12.0.volts
+import org.firstinspires.ftc.teamcode.NOMINAL_VOLTAGE
 
 class Drivetrain : Mechanism {
-    val frontLeft = NextMotor("front_left")
-    val frontRight = NextMotor("front_right")
-    val backLeft = NextMotor("back_left")
-    val backRight = NextMotor("back_right")
+    val frontLeft = NextMotor("leftFrontMotor")
+    val frontRight = NextMotor("rightFrontMotor")
+    val backLeft = NextMotor("leftRearMotor")
+    val backRight = NextMotor("rightRearMotor")
 
     init {
         frontRight.direction = NextMotor.Direction.REVERSE
         frontLeft.direction = NextMotor.Direction.REVERSE
         backRight.direction = NextMotor.Direction.REVERSE
         backLeft.direction = NextMotor.Direction.REVERSE
+
+        frontRight.zeroPowerBehavior = NextMotor.ZeroPowerBehavior.BRAKE
+        frontLeft.zeroPowerBehavior = NextMotor.ZeroPowerBehavior.BRAKE
+        backRight.zeroPowerBehavior = NextMotor.ZeroPowerBehavior.BRAKE
+        backLeft.zeroPowerBehavior = NextMotor.ZeroPowerBehavior.BRAKE
     }
 
     val kinematics = MecanumKinematics(1.1)
