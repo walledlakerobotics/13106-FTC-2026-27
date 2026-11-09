@@ -26,7 +26,7 @@ class Launcher : Mechanism {
     }
 
     val run: Command
-        get() = instant { launcherMotor.setVelocitySetpoint(5.0.rotationsPerSecond) }
+        get() = instant { launcherMotor.voltage = 6.0.volts }
             .setDone { false }
             .setEnd { launcherMotor.voltage = 0.0.volts }
 }
