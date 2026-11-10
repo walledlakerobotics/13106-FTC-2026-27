@@ -5,7 +5,6 @@ import dev.nextftc.hardware.actuators.NextMotor
 import dev.nextftc.robot.Mechanism
 import dev.nextftc.units.RadiansPerSecond
 import dev.nextftc.units.rotationsPerMinute
-import dev.nextftc.units.rotationsPerSecond
 import dev.nextftc.units.volts
 
 class Launcher : Mechanism {
